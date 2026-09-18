@@ -1,35 +1,32 @@
-# Problem Statement: Campus Resource Booking System (CCRBS)
+# Campus Course & Records Manager (CCRM)
 
-## The Problem
-Managing resources across a university campus—such as lecture halls, computer labs, projectors, and study spaces—often involves disjointed systems or manual tracking. Students struggle to find available study rooms, faculty face double-booked lecture halls, and administrators lack a centralized view of resource utilization.
+Campus Course & Records Manager (CCRM) is a Java-based application designed to make the management of student and academic records easier and more organized. Instead of keeping different records manually, the system provides a single place to manage student details, courses, enrollments, grades, and academic performance.
 
-As campus activities scale, the risk of conflicting reservations increases. Without a centralized, thread-safe booking mechanism, concurrent requests for the same room at the same time can result in erroneous double-bookings, causing logistical nightmares and operational inefficiency.
+## Objective
 
-## Scope of the Project
-The Campus Resource Booking System (CCRBS) provides a centralized, console-based Java application to streamline the reservation of campus assets. The system ensures robust data persistence via SQLite, thread-safe booking mechanisms to prevent race conditions, and role-based access control to distinguish between varying levels of user authorization.
+The main objective of this project is to develop a simple and practical system for handling common academic record-management tasks. It also helps demonstrate how Java and Object-Oriented Programming concepts can be used to build a real-world application.
 
-## Target Users
+## Key Features
 
-*   **Students:** Can view available resources, make bookings for study spaces or equipment, and view/cancel their own reservations.
-*   **Faculty:** Can book lecture halls and specialized labs for classes, with priority access considerations where applicable.
-*   **Administrators:** Have full oversight. They can view all users, monitor all bookings across the campus, manage system data, and run concurrency simulations for testing.
+- Add, update, search, and manage student records
+- Add and manage course details
+- Enroll students in available courses
+- Validate course credit limits during enrollment
+- Record and update student grades
+- Calculate GPA based on academic performance
+- Import and export records using CSV files
+- Create backups and restore saved data
+- Generate basic academic reports and statistics
+- Handle invalid input and errors using exception handling
 
-## High-Level Features
+## Technologies & Concepts Used
 
-| Feature Module | Description |
-| :--- | :--- |
-| **Authentication & Authorization** | User registration, login, and role-based dashboards (Student, Faculty, Admin). |
-| **Resource Catalog** | View all campus resources, filter by type, and check real-time availability for specific dates/slots. |
-| **Concurrency-Safe Booking** | Synchronized processing of reservations ensuring that simultaneous requests for the same resource do not result in double-booking. |
-| **Receipt Generation** | Automated generation of booking receipts demonstrating both character-oriented (text) and byte-oriented (binary) I/O file streams. |
+- **Programming Language:** Java
+- **OOP Concepts:** Encapsulation, Inheritance, Abstraction, and Polymorphism
+- **Java Features:** Collections, Interfaces, Stream API, Exception Handling
+- **File Handling:** File I/O, CSV processing, and NIO.2
+- **Data Storage:** File and CSV-based storage
 
-## Technical Constraints / Academic Requirements
-This project serves as a comprehensive demonstration of Core Java concepts:
-*   Must utilize **Object-Oriented Programming** principles (inheritance, abstract classes, encapsulation).
-*   Must implement custom **Exception Handling** for domain-specific errors (e.g., `ResourceNotAvailableException`).
-*   Must use **Multithreading** with `Thread` or `Runnable` and `synchronized` blocks to handle concurrent bookings.
-*   Must perform **File I/O** using both Byte Streams (`FileInputStream`/`FileOutputStream`) and Character Streams (`FileReader`/`FileWriter`).
-*   Must interact with an **SQLite** database using JDBC for data persistence.
+## Expected Outcome
 
-## Expected Outcomes
-A fully functional, console-driven Java application that successfully mitigates double-booking scenarios under concurrent load, generates file-based receipts, and provides a structured, role-based user experience for campus resource management.
+CCRM provides a structured way to manage academic information and reduces the effort involved in maintaining records manually. The project also gives practical experience in using Java programming concepts to develop a useful campus management application.
